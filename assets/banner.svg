@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-label="Wang Ling futuristic ink banner">
+  <defs>
+    <linearGradient id="void" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050505"/>
+      <stop offset="50%" stop-color="#12000a"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff004c"/>
+      <stop offset="50%" stop-color="#ff2d95"/>
+      <stop offset="100%" stop-color="#ff8ac9"/>
+    </linearGradient>
+    <linearGradient id="scan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff2d95" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ff2d95" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff2d95" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#ff2d95" stroke-opacity="0.12" stroke-width="1"/>
+    </pattern>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="280" fill="url(#void)"/>
+  <rect width="1200" height="280" fill="url(#grid)"/>
+
+  <!-- scanline -->
+  <rect x="0" width="1200" height="40" fill="url(#scan)">
+    <animate attributeName="y" values="-40;280;-40" dur="6s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- neon diagonal -->
+  <polygon points="860,0 960,0 620,280 520,280" fill="#ff004c" opacity="0.22" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.15;0.35;0.15" dur="3.5s" repeatCount="indefinite"/>
+  </polygon>
+
+  <rect x="0" y="0" width="6" height="280" fill="url(#neon)"/>
+
+  <text x="40" y="48" fill="#ff8ac9" font-family="Consolas, monospace" font-size="12" letter-spacing="4">SYS // PROFILE.README � ONLINE</text>
+
+  <text x="40" y="130" fill="#ffffff" font-family="Impact, Haettenschweiler, sans-serif" font-size="72" letter-spacing="4" filter="url(#glow)">??</text>
+  <text x="44" y="132" fill="#ff004c" fill-opacity="0.35" font-family="Impact, Haettenschweiler, sans-serif" font-size="72" letter-spacing="4">??</text>
+
+  <text x="40" y="175" fill="#ff2d95" font-family="Consolas, monospace" font-size="22" letter-spacing="8">WANG LING</text>
+  <text x="40" y="210" fill="#ffffff" fill-opacity="0.75" font-family="Consolas, monospace" font-size="14" letter-spacing="3">SATHWIK GARIKAPATI � DESIGN � BUILD � INTELLIGENCE</text>
+  <text x="40" y="240" fill="#ff8ac9" font-family="Consolas, monospace" font-size="12" letter-spacing="2">INK � CYBER � 3D � AI/ML � FUTURE STACK</text>
+
+  <!-- hud corners -->
+  <path d="M1080 30 H1170 V70" fill="none" stroke="#ff2d95" stroke-width="2"/>
+  <path d="M1080 250 H1170 V210" fill="none" stroke="#ff004c" stroke-width="2"/>
+  <circle cx="1125" cy="140" r="28" fill="none" stroke="#ff2d95" stroke-width="2" stroke-dasharray="4 3">
+    <animateTransform attributeName="transform" type="rotate" from="0 1125 140" to="360 1125 140" dur="12s" repeatCount="indefinite"/>
+  </circle>
+  <text x="1125" y="146" text-anchor="middle" fill="#ffffff" font-family="Consolas, monospace" font-size="11">g-sat</text>
+</svg>
